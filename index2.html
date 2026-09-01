@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>my page</title>
+<style>
+#secret{
+   color:green;
+   font-size:18px;
+   font-family:cursive;
+}
+
+button{
+  background-color:pink;
+  color:white;
+  border:none;
+  padding:12pxm20px;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+}
+body{
+    background-color:pink;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100hv;
+   }
+.card{
+      background-color:white;
+      width:600px;
+      height:500px;
+      padding:30px;
+      border-radius:50px;
+      text-align:center;
+      box-shadow:0 15px 30px rgba(0,0,0,0.6);
+      animation:popIn 1s ease-out;
+     }
+h1{
+        color:#d63384;
+        font-family:cursive;
+        animation:fadeIn 1s ease-in;
+      }
+    p{
+      color:#555;
+      font-size:18px;
+      line-height:1.6;
+      animation:fadeIn 1.5s ease-in;
+      }
+            @keyframes fadeIn{
+         from{
+           transform:scale(0.7);
+           opacity:0;
+      }
+      to {
+         transform:scale(1);
+         opacity:1;
+      } 
+      
+      @keyframes popIn{
+         from{
+           transform:scale(0.7);
+           opacity:0;
+      }
+      to {
+         transform:scale(1);
+         opacity:1;
+      }
+      
+      @keyframes photoPop {
+        from {
+           transform: scale(0.5) translateY(30px);
+           opacity:0;
+     }
+     to {
+       transform: scale(1) translateY(0);
+     opacity:1;
+     }
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>TO MY FRIEND</h1>
+<img src="frnd.jpg" alt="my friend" style="width:250px; height:200px; object-fit:cover; animation:photoPop 0.8s ease-out infinte alternate;">
+<p>you are one of the most special people in my life.<br>Thank you for always being there for me...!</p>
+<button onclick="showMessage()">click for surprise!</button>
+<p id="secret"></p>
+<script>
+function showMessage() {
+document.getElementById("secret").innerHTML="'patticheeee'";}
+</script>
+</div>
+</body>
+</html>
